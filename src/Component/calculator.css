@@ -1,0 +1,105 @@
+.conatiner{
+
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color:white;
+    display: flex;
+    /* justify-content:space-between ; */
+}
+
+.formic{
+   
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.header{
+
+    display: flex;
+    justify-content: space-around;
+}
+.formic h1{
+
+    font-size: 20px;
+}
+
+.headerbtn{
+
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    
+    outline: "none",
+}
+.inputwidth{
+
+    width: 200px;
+   
+}
+.inputwidth2{
+
+    width: 200px ;
+    margin: 0px 0px 0px 10px ;
+}
+.inputspan{
+
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.allinput{
+
+    width:550px;
+}
+
+.term{
+    display: flex;
+    flex-direction: column;
+}
+
+.twodiv{
+    display: flex;
+}
+
+
+.defaultresult img{
+
+    width: 40%;
+    align-self: center;
+    margin-top: 100px;
+   
+}
+
+.defaultresult h1{
+
+    color: white;
+    align-self: center;
+
+}
+.defaultresult p{
+
+    align-self: center;
+    width: 62%;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 105px;
+}
+
+.defaultresult{
+    background-color: black;
+    border-radius:0px 0px 0px 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+

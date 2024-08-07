@@ -458,10 +458,19 @@ export default function Calculator() {
            
            width:100%;
            
-           }
-    
-        
+           } 
+     @media (min-width: 375px) {
+
+  
+       
+           div.this{
+           
+           width:100%;
+           
+           } 
     }
+
+
 
 
    
