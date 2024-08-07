@@ -15,8 +15,9 @@ export default function Calculator1() {
     fontSize: "20px",
     border: `2px solid ${type === selectedMortgageType ? "#f0c20a" : "black"}`,
     padding: "13px",
-    width: "74%",
-    borderRadius: "10px"
+    width: "85%",
+    borderRadius: "10px",
+    margin:"0px 0px 10px 0px"
   });
 
   const formCheckInputStyle = (isSelected) => ({
@@ -30,38 +31,35 @@ export default function Calculator1() {
     lineHeight: "1.5",
   };
 
-  const buttonStyle = {
-    display: "flex",
-    borderRadius: "27px",
-    padding: "10px 35px 10px 35px",
-    alignItems: "center",
-    fontSize: "18px",
-   
-  };
+
   const handleRadioChange = (event) => {
     setSelectedMortgageType(event.target.value);
   };
   return (
     <div className='conatiner'>
-      
+<div className='tablet'>
       <div className='formic'>
         <div className='header'>  <h1> Mortgae Calculator</h1>
-       <button className='headerbtn'>Clear all</button> </div>
+      <div style={{display:"flex"}}> <button className='headerbtn'>Clear all</button> </div>
+      
+       </div>
 
        <form >
         <div className='allinput'>
-             <p >Mortgage Amount</p>
-             <div style={{width:"410px"}}>
+             <span className='spany'>Mortgage Amount</span>
+             <div style={{width:"480px",margin:"10px 0px 10px 0px"}}>
+              <div className="firstinput">
              <div className="input-group">
-              <span className='inputspan'> £</span>
+              <span className='inputspan' style={{borderRadius:"10px 0px 0px 10px"}}> £</span>
               <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)"/>
+            </div>
             </div>
             </div>
 
             <div className='twodiv'>
 
             <div className='term'>
-             <p >Mortgage Term</p>
+             <span style={{margin:"0px 0px 10px 0px"}} >Mortgage Term</span>
 
              <div className='inputwidth' >
              <div className="input-group">
@@ -73,7 +71,7 @@ export default function Calculator1() {
             </div>
 
             <div className='term'>
-             <p >Intrest rate</p>
+             <span style={{margin:"0px 0px 10px 10px"}}>Intrest rate</span>
              <div className='inputwidth2'>
 
              <div className="input-group">
@@ -85,7 +83,8 @@ export default function Calculator1() {
             </div>
             
              {/* Payment type */}
-             <p >Mortgage Type</p>
+             <div className='paymenttype'>
+             <p style={{margin:"10px 0px 10px 0px"}} >Mortgage Type</p>
             <div style={formCheckStyle("repayment")}>
               <input
                 style={formCheckInputStyle(selectedMortgageType  === 'repayment')}
@@ -116,11 +115,13 @@ export default function Calculator1() {
               </label>
             </div>
             </div>
-            <button type="submit" className="btn btn-warning" style={buttonStyle}>
+
+            </div>
+            <button type="submit" className="btn" >
               <i className='bx bxs-calculator' style={{ fontSize: "29px", paddingRight: "10px" }}></i> Calculate Repayments
             </button>
        </form>
-
+       </div>
       </div>
 
        <div className='result'>

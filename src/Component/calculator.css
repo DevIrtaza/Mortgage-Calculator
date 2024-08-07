@@ -19,10 +19,13 @@
 
     display: flex;
     justify-content: space-around;
+    margin-top: 35px;
+    margin-bottom: 20px;
 }
 .formic h1{
 
     font-size: 20px;
+    font-weight: bolder;
 }
 
 .headerbtn{
@@ -67,6 +70,7 @@
 
 .twodiv{
     display: flex;
+    margin-left: 72px;
 }
 
 
@@ -98,6 +102,147 @@
     border-radius:0px 0px 0px 190px;
     display: flex;
     flex-direction: column;
+}
+
+.spany{
+    margin: 0px 0px 0px 74px;
+}
+.firstinput{
+    margin: 0px 0px 0px 74px;
+}
+
+.paymenttype{
+
+    margin: 0px 0px 0px 74px;
+}
+
+
+.btn {
+    /* Your styles here */
+    background-color: #ffc107; /* Example background color */
+    border: 1px solid #ffc107; /* Example border color */
+    color: #212529; /* Example text color */
+    font-size: 16px; /* Example font size */
+    padding: 10px 20px; /* Example padding */
+    border-radius: 27px; /* Example border radius */
+    transition: background-color 0.3s ease; /* Example transition effect */
+    margin:20px 0px 0px 70px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Optional: Adding hover effect */
+  .btn:hover {
+    background-color: #e0a800; /* Darker background color on hover */
+    border-color: #e0a800; /* Darker border color on hover */
+  }
+  
+
+  
+
+@media (max-width:769px) {
+    
+    .tablet{
+
+        width: 430px;
+    }
+
+    .spany{
+        margin: 0px 0px 0px 48px;
+    }
+
+    .firstinput{
+
+      margin:0px 0px 0px 48px ;
+      width: 340px;
+    }
+
+    .twodiv{
+        margin:0px 0px 0px 48px ;
+         width: 340px;
+    }
+
+    .paymenttype{
+        margin:0px 0px 0px 48px ;
+      width: 400px;
+    }
+
+    .btn{
+        margin: 20px 0px 0px 48px;
+    }
+
+    .inputwidth{
+        width: 166px;
+    }
+
+    .inputwidth2{
+        width: 166px;
+    }
+    
+}
+
+@media (max-width:426px) {
+    
+.conatiner{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+.header button{
+    display: flex;
+}
+.defaultresult{
+
+    width: 550px;
+    border-radius: 0px;
+    margin-top: 20px;
+}
+.tablet{
+    width: 550px;
+}
+
+.spany{
+    margin: 0px 0px 0px 70px;
+}
+
+.firstinput{
+
+  margin:0px 0px 0px 70px ;
+  width: 410px;
+}
+
+.twodiv{
+    margin:0px 0px 0px 70px ;
+     width: 410px;
+}
+
+.paymenttype{
+    margin:0px 0px 0px 70px ;
+  width: 478px;
+}
+
+.btn{
+    font-size: 25px;
+    margin: 20px 0px 0px 66px;
+   
+    padding: 10px 64px;
+}
+
+.inputwidth{
+    width: 200px;
+}
+
+.inputwidth2{
+    width: 200px;
+}
+
 }
 
 
