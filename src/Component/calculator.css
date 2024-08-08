@@ -104,6 +104,60 @@
     flex-direction: column;
 }
 
+.calculationresult{
+
+    background-color: black;
+    border-radius:0px 0px 0px 110px;
+    display: flex;
+    flex-direction: column;
+    padding: 37px 60px 122px 60px;
+}
+
+.calculationresult h2{
+    text-align: left;
+    margin-bottom: 15px;
+}
+.thisisp{
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.calculationresult h1{
+    text-align: left;
+}
+
+.resultdisplay{
+
+    border: 2px solid #333333;
+    background-color: #333333;
+    border-radius: 10px;
+    border-top: 10px solid yellow;
+    /* width: 700px; */
+}
+
+.resultp{
+     text-align: left;
+    font-size: 20px;
+    padding: 20px 0px 0px 20px;
+}
+
+.thisish1{
+
+    padding: 0px 0px 20px 20px;
+    font-size: 70px;
+    color: yellow;
+
+}
+.thisish2{
+
+    padding: 0px 0px 20px 20px;
+}
+
+.line{
+    margin: 0px 20px 0px 20px;
+}
+
 .spany{
     margin: 0px 0px 0px 74px;
 }
@@ -126,7 +180,7 @@
     padding: 10px 20px; /* Example padding */
     border-radius: 27px; /* Example border radius */
     transition: background-color 0.3s ease; /* Example transition effect */
-    margin:20px 0px 0px 70px; 
+    margin:40px 0px 0px 70px; 
     display: flex;
     align-items: center;
   }
@@ -145,6 +199,14 @@
     .tablet{
 
         width: 430px;
+    }
+    
+    .resultp{
+        font-size: 13px;
+    }
+    .calculationresult{
+
+      padding-bottom:50px ;
     }
 
     .spany{
@@ -178,10 +240,15 @@
     .inputwidth2{
         width: 166px;
     }
+
+    .defaultresult{
+
+        border-radius: 0px 0px 0px 100px;
+    }
     
 }
 
-@media (max-width:426px) {
+@media (max-width:431px) {
     
 .conatiner{
 
@@ -200,6 +267,12 @@
 }
 .defaultresult{
 
+    width: 550px;
+    border-radius: 0px;
+    margin-top: 20px;
+}
+
+.calculationresult{
     width: 550px;
     border-radius: 0px;
     margin-top: 20px;

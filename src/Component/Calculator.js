@@ -325,7 +325,7 @@ export default function Calculator() {
 
         {/* 2nd container */}
         <div className='result' style={resultStyle}>
- {result !== null ? (
+             {result !== null ? (
             <>
                   {/* aftercalculation  */}
             <h2>Your results</h2>
