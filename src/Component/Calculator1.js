@@ -70,8 +70,8 @@ export default function Calculator1() {
     return monthlyPayment.toFixed(2); // Format to 2 decimal places
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the form from reloading the page
+    const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent reloading page
 
     const principal = parseFloat(amount);
     const annualRate = parseFloat(rate);
@@ -79,7 +79,6 @@ export default function Calculator1() {
 
     let newErrors = { amount: "", year: "", rate: "", type:"" };
 
-    // Validate inputs
     if (isNaN(principal) || principal <= 0) {
       newErrors.amount = "This field is required";
     }
@@ -89,9 +88,6 @@ export default function Calculator1() {
     if (isNaN(years) || years <= 0) {
       newErrors.year = "This field is required";
     }
-
-    console.log(selectedMortgageType);
-    
 
     if(!(selectedMortgageType === 'repayment' || selectedMortgageType === 'interestOnly')){
       
@@ -103,12 +99,12 @@ export default function Calculator1() {
       return;
     }
 
-   
-
     // Clear errors if valid
+
     setErrors({ amount: "", year: "", rate: "",type:"" });
 
     // Calculate the monthly payment based on the mortgage type
+
     let result;
     let totalRepayment;
 
@@ -120,8 +116,10 @@ export default function Calculator1() {
       totalRepayment = (parseFloat(result) * totalPayments).toFixed(2);
 
     } else if (selectedMortgageType === 'interestOnly') {
-      result = (principal * annualRate / 100 / 12).toFixed(2); // Simple Interest calculation for demonstration
+      result = (principal * annualRate / 100 / 12).toFixed(2); //Intrest only calculation
+
       // For interest-only mortgage, total repayment is just interest over time
+
       totalRepayment = (principal * annualRate / 100).toFixed(2);
     }
 

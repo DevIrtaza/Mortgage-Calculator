@@ -80,7 +80,7 @@
 
 .defaultresult p {
     align-self: center;
-    width:90%;
+    width: 90%;
     font-size: 20px;
     text-align: center;
     margin-bottom: 105px;
@@ -91,7 +91,7 @@
     border-radius: 0px 0px 0px 190px;
     display: flex;
     flex-direction: column;
-    padding:4px 139px 3px 139px ;
+    padding: 4px 139px 3px 139px;
 }
 
 .calculationresult {
@@ -229,18 +229,17 @@
 
     .defaultresult {
         border-radius: 0px 0px 0px 100px;
-        padding:10px ;
+        padding: 10px;
     }
+
     .defaultresult {
         border-radius: 0px 0px 0px 100px;
-        padding:5px ;
+        padding: 5px;
     }
 
-    .defaultresult h1{
-
+    .defaultresult h1 {
         font-size: 21px;
     }
-   
 }
 
 @media (max-width: 431px) {
@@ -310,10 +309,8 @@
     }
 }
 
-@media (max-width:1320px) {
-    
-    .defaultresult h1{
+@media (max-width: 1320px) {
+    .defaultresult h1 {
         font-size: 25px;
     }
 }
-
