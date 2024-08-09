@@ -1,35 +1,31 @@
-.conatiner{
-
+.conatiner {
     width: 100%;
     height: 100%;
     background-color: white;
-    color:white;
+    color: white;
     display: flex;
-    /* justify-content:space-between ; */
+    /* justify-content: space-between; */
 }
 
-.formic{
-   
+.formic {
     background-color: white;
     color: black;
     text-align: left;
 }
 
-.header{
-
+.header {
     display: flex;
     justify-content: space-around;
     margin-top: 35px;
     margin-bottom: 20px;
 }
-.formic h1{
 
+.formic h1 {
     font-size: 20px;
     font-weight: bolder;
 }
 
-.headerbtn{
-
+.headerbtn {
     font-size: 20px;
     border: none;
     background-color: white;
@@ -37,98 +33,91 @@
     cursor: pointer;
     padding: 0;
     text-decoration: underline;
-    
-    outline: "none",
+    text-underline-offset: 5px;
+    outline: none;
 }
-.inputwidth{
 
+.inputwidth {
     width: 200px;
-   
 }
-.inputwidth2{
 
-    width: 200px ;
-    margin: 0px 0px 0px 10px ;
+.inputwidth2 {
+    width: 200px;
+    margin: 0px 0px 0px 10px;
 }
-.inputspan{
 
+.inputspan {
     background-color: black;
     color: white;
     padding: 10px;
     border-radius: 0px 10px 10px 0px;
 }
 
-.allinput{
-
-    width:550px;
+.allinput {
+    width: 550px;
 }
 
-.term{
+.term {
     display: flex;
     flex-direction: column;
 }
 
-.twodiv{
+.twodiv {
     display: flex;
     margin-left: 72px;
 }
 
-
-.defaultresult img{
-
-    width: 40%;
+.defaultresult img {
+    width: 60%;
     align-self: center;
     margin-top: 100px;
-   
 }
 
-.defaultresult h1{
-
+.defaultresult h1 {
     color: white;
     align-self: center;
-
 }
-.defaultresult p{
 
+.defaultresult p {
     align-self: center;
-    width: 62%;
+    width:90%;
     font-size: 20px;
     text-align: center;
     margin-bottom: 105px;
 }
 
-.defaultresult{
+.defaultresult {
     background-color: black;
-    border-radius:0px 0px 0px 190px;
+    border-radius: 0px 0px 0px 190px;
     display: flex;
     flex-direction: column;
+    padding:4px 139px 3px 139px ;
 }
 
-.calculationresult{
-
+.calculationresult {
     background-color: black;
-    border-radius:0px 0px 0px 110px;
+    border-radius: 0px 0px 0px 110px;
     display: flex;
     flex-direction: column;
     padding: 37px 60px 122px 60px;
 }
 
-.calculationresult h2{
+.calculationresult h2 {
     text-align: left;
     margin-bottom: 15px;
 }
-.thisisp{
+
+.thisisp {
     text-align: left;
     font-size: 20px;
     margin-bottom: 35px;
 }
 
-.calculationresult h1{
+.calculationresult h1 {
     text-align: left;
 }
 
-.resultdisplay{
-
+.resultdisplay {
     border: 2px solid #333333;
     background-color: #333333;
     border-radius: 10px;
@@ -136,188 +125,195 @@
     /* width: 700px; */
 }
 
-.resultp{
-     text-align: left;
+.resultp {
+    text-align: left;
     font-size: 20px;
     padding: 20px 0px 0px 20px;
 }
 
-.thisish1{
-
+.thisish1 {
     padding: 0px 0px 20px 20px;
     font-size: 70px;
     color: yellow;
-
 }
-.thisish2{
 
+.thisish2 {
     padding: 0px 0px 20px 20px;
 }
 
-.line{
+.line {
     margin: 0px 20px 0px 20px;
 }
 
-.spany{
-    margin: 0px 0px 0px 74px;
-}
-.firstinput{
+.spany {
     margin: 0px 0px 0px 74px;
 }
 
-.paymenttype{
-
+.firstinput {
     margin: 0px 0px 0px 74px;
 }
 
+.paymenttype {
+    margin: 0px 0px 0px 74px;
+}
 
 .btn {
-    /* Your styles here */
-    background-color: #ffc107; /* Example background color */
-    border: 1px solid #ffc107; /* Example border color */
-    color: #212529; /* Example text color */
-    font-size: 16px; /* Example font size */
-    padding: 10px 20px; /* Example padding */
-    border-radius: 27px; /* Example border radius */
-    transition: background-color 0.3s ease; /* Example transition effect */
-    margin:40px 0px 0px 70px; 
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    color: #212529;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 27px;
+    transition: background-color 0.3s ease;
+    margin: 40px 0px 0px 70px;
     display: flex;
     align-items: center;
-  }
-  
-  /* Optional: Adding hover effect */
-  .btn:hover {
-    background-color: #e0a800; /* Darker background color on hover */
-    border-color: #e0a800; /* Darker border color on hover */
-  }
-  
+}
 
-  
+/* Optional: Adding hover effect */
+.btn:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
 
-@media (max-width:769px) {
-    
-    .tablet{
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
+@media (max-width: 1012px) {
+    .tablet {
         width: 430px;
     }
-    
-    .resultp{
+
+    .resultp {
         font-size: 13px;
     }
-    .calculationresult{
 
-      padding-bottom:50px ;
+    .calculationresult {
+        padding-bottom: 50px;
     }
 
-    .spany{
+    .spany {
         margin: 0px 0px 0px 48px;
     }
 
-    .firstinput{
-
-      margin:0px 0px 0px 48px ;
-      width: 340px;
+    .firstinput {
+        margin: 0px 0px 0px 48px;
+        width: 340px;
     }
 
-    .twodiv{
-        margin:0px 0px 0px 48px ;
-         width: 340px;
+    .twodiv {
+        margin: 0px 0px 0px 48px;
+        width: 340px;
     }
 
-    .paymenttype{
-        margin:0px 0px 0px 48px ;
-      width: 400px;
+    .paymenttype {
+        margin: 0px 0px 0px 48px;
+        width: 400px;
     }
 
-    .btn{
+    .btn {
         margin: 20px 0px 0px 48px;
     }
 
-    .inputwidth{
+    .inputwidth {
         width: 166px;
     }
 
-    .inputwidth2{
+    .inputwidth2 {
         width: 166px;
     }
 
-    .defaultresult{
-
+    .defaultresult {
         border-radius: 0px 0px 0px 100px;
+        padding:10px ;
     }
-    
-}
+    .defaultresult {
+        border-radius: 0px 0px 0px 100px;
+        padding:5px ;
+    }
 
-@media (max-width:431px) {
-    
-.conatiner{
+    .defaultresult h1{
 
-    display: flex;
-    flex-direction: column;
-}
-
-.header{
-
-    display: flex;
-    flex-direction: column;
-    margin-left: 70px;
-}
-.header button{
-    display: flex;
-}
-.defaultresult{
-
-    width: 550px;
-    border-radius: 0px;
-    margin-top: 20px;
-}
-
-.calculationresult{
-    width: 550px;
-    border-radius: 0px;
-    margin-top: 20px;
-}
-.tablet{
-    width: 550px;
-}
-
-.spany{
-    margin: 0px 0px 0px 70px;
-}
-
-.firstinput{
-
-  margin:0px 0px 0px 70px ;
-  width: 410px;
-}
-
-.twodiv{
-    margin:0px 0px 0px 70px ;
-     width: 410px;
-}
-
-.paymenttype{
-    margin:0px 0px 0px 70px ;
-  width: 478px;
-}
-
-.btn{
-    font-size: 25px;
-    margin: 20px 0px 0px 66px;
+        font-size: 21px;
+    }
    
-    padding: 10px 64px;
 }
 
-.inputwidth{
-    width: 200px;
+@media (max-width: 431px) {
+    .conatiner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin-left: 70px;
+    }
+
+    .header button {
+        display: flex;
+    }
+
+    .defaultresult {
+        width: 550px;
+        border-radius: 0px;
+        margin-top: 20px;
+        padding: 0px;
+    }
+
+    .calculationresult {
+        width: 550px;
+        border-radius: 0px;
+        margin-top: 20px;
+    }
+
+    .tablet {
+        width: 550px;
+    }
+
+    .spany {
+        margin: 0px 0px 0px 70px;
+    }
+
+    .firstinput {
+        margin: 0px 0px 0px 70px;
+        width: 410px;
+    }
+
+    .twodiv {
+        margin: 0px 0px 0px 70px;
+        width: 410px;
+    }
+
+    .paymenttype {
+        margin: 0px 0px 0px 70px;
+        width: 478px;
+    }
+
+    .btn {
+        font-size: 25px;
+        margin: 20px 0px 0px 66px;
+        padding: 10px 64px;
+    }
+
+    .inputwidth {
+        width: 200px;
+    }
+
+    .inputwidth2 {
+        width: 200px;
+    }
 }
 
-.inputwidth2{
-    width: 200px;
+@media (max-width:1320px) {
+    
+    .defaultresult h1{
+        font-size: 25px;
+    }
 }
-
-}
-
-
-
 
