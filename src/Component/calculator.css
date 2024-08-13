@@ -23,6 +23,7 @@
 .formic h1 {
     font-size: 20px;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .headerbtn {
@@ -39,19 +40,20 @@
 
 .inputwidth {
     width: 200px;
+      cursor:pointer;
 }
 
 .inputwidth2 {
     width: 200px;
     margin: 0px 0px 0px 10px;
+    cursor:pointer;
 }
 
-.inputspan {
-    background-color: black;
-    color: white;
+/* .inputspan {
+   
     padding: 10px;
     border-radius: 0px 10px 10px 0px;
-}
+} */
 
 .allinput {
     width: 550px;
@@ -87,7 +89,7 @@
 }
 
 .defaultresult {
-    background-color: black;
+    background-color: #002533;
     border-radius: 0px 0px 0px 190px;
     display: flex;
     flex-direction: column;
@@ -95,7 +97,7 @@
 }
 
 .calculationresult {
-    background-color: black;
+    background-color: #002533;
     border-radius: 0px 0px 0px 110px;
     display: flex;
     flex-direction: column;
@@ -147,6 +149,7 @@
 
 .spany {
     margin: 0px 0px 0px 74px;
+    cursor: pointer;
 }
 
 .firstinput {

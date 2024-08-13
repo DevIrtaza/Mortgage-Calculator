@@ -15,28 +15,94 @@ export default function Calculator1() {
     rate: "",
     type:"",
   });
+  const [isHovered3, setIsHovered3] = useState(false);
+  
+  const [isHovered2, setIsHovered2] = useState(false);
+
+  const [isHovered1, setIsHovered1] = useState(false);
+
+  const inputstyle1={
+    border:"2px solid ",
+    borderRadius:"13px 10px 10px 13px ",
+    borderColor: errors.amount ? "red" : isHovered1 ?" #e6e600" :"#ccf2ff",
+    transition: 'border-color 0.3s, background-color 0.3s',
+    cursor: "pointer"
+  }
+
+  const spanstyle1={
+   backgroundColor: errors.amount ? "red" : isHovered1 ?" #e6e600" :"#ccf2ff",
+   color:"black",
+   padding:"10px 14px 10px 14px",
+   borderRadius:"11px 0px 0px 11px",
+   fontWeight: isHovered1 ? "600" :"600",
+   transition: 'color 0.3s',
+   cursor:"pointer"
+
+
+  }
+  const inputstyle2={
+    border:"2px solid ",
+    borderRadius:"10px 15px 15px 10px ",
+    borderColor: errors.rate ? "red" : isHovered2 ?" #e6e600" :"#ccf2ff",
+    transition: 'border-color 0.3s, background-color 0.3s',
+    cursor: "pointer"
+  }
+
+  const spanstyle2={
+   backgroundColor: errors.year ? "red" : isHovered2 ?" #e6e600" :"#ccf2ff",
+   color:"black",
+   padding:"10px",
+   borderRadius:"0px 12px 10px 0px",
+   fontWeight: isHovered2 ? "600" :"600",
+   transition: 'color 0.3s',
+   cursor:"pointer"
+
+
+  }
+  const inputstyle3={
+    border:"2px solid ",
+    borderRadius:"10px 15px 15px 10px ",
+    borderColor: errors.rate ? "red" : isHovered3 ?" #e6e600" :"#ccf2ff",
+    transition: 'border-color 0.3s, background-color 0.3s',
+      cursor:"pointer"
+  }
+
+  const spanstyle3={
+   backgroundColor: errors.rate ? "red" : isHovered3 ?" #e6e600" :"#ccf2ff",
+   color:"black",
+   padding:"10px",
+   borderRadius:"0px 12px 10px 0px",
+   fontWeight: isHovered3 ? "bold" :"bold",
+   transition: 'color 0.3s',
+     cursor:"pointer"
+
+
+  }
 
   const formCheckStyle = (type) => ({
     display: "flex",
     alignItems: "center",
     fontWeight: "bold",
     fontSize: "20px",
-    border: `2px solid ${type === selectedMortgageType ? "#f0c20a" : "black"}`,
+    border: `2px solid ${type === selectedMortgageType ? "#f0c20a" : " #99e4ff"}`,
     padding: "13px",
     width: "85%",
     borderRadius: "10px",
-    margin: "0px 0px 10px 0px"
+    margin: "0px 0px 10px 0px",
+    cursor:"pointer"
   });
 
   const formCheckInputStyle = (isSelected) => ({
     margin: "0",
     backgroundColor: isSelected ? "#f0c20a" : "white",
-    border: isSelected ? "1px solid #f0c20a" : "2px solid black",
+    border: isSelected ? "1px solid #f0c20a" : "2px solid  #99e4ff",
+    cursor:"pointer"
   });
 
   const formCheckLabelStyle = {
     marginLeft: "1rem",
     lineHeight: "1.5",
+    cursor:"pointer"
   };
 
   const handleRadioChange = (event) => {
@@ -142,18 +208,16 @@ export default function Calculator1() {
             <div className='allinput'>
               <span className='spany'>Mortgage Amount</span>
               <div style={{ width: "480px", margin: "10px 0px 10px 0px" }}>
-                <div className="firstinput">
-                  <div className="input-group">
+                <div className="firstinput" >
+                  <div className="input-group" style={inputstyle1} onMouseEnter={() => setIsHovered1(true)}
+                          onMouseLeave={() => setIsHovered1(false)}   >
                     <span 
                     
-                    style={{
-                      backgroundColor: errors.amount ? 'red' : 'black', // Change background color based on error
-                      color: errors.amount ? 'white' : 'white', // Keep text color white for better contrast
-                       borderRadius: "10px 0px 0px 10px"
-                    }}
+                    style={spanstyle1}
                     
                     className='inputspan' > £</span>
-                    <input
+                    <input 
+                    
                       value={amount}
                       onChange={handleAmountChange}
                       type="text"
@@ -167,11 +231,12 @@ export default function Calculator1() {
 
               <div className='twodiv'>
                 <div className='term'>
-                  <span style={{ margin: "15px 0px 10px 0px",
+                  <span style={{ margin: "15px 0px 10px 0px",cursor:"pointer"
                     
                   }}>Mortgage Term</span>
-                  <div className='inputwidth'>
-                    <div className="input-group">
+                  <div className='inputwidth'  >
+                    <div className="input-group" style={inputstyle2} onMouseEnter={() => setIsHovered2(true)}
+                          onMouseLeave={() => setIsHovered2(false)}>   
                       <input
                         value={year}
                         onChange={handleYearChange}
@@ -179,19 +244,19 @@ export default function Calculator1() {
                         className="form-control"
                         aria-label="Amount (to the nearest dollar)"
                       />
-                      <span  style={{
-            backgroundColor: errors.year ? 'red' : 'black', // Change background color based on error
-            color: errors.year ? 'white' : 'white', // Keep text color white for better contrast
-          }} className='inputspan'> years</span>
+                      <span   style={spanstyle2}
+           
+         className='inputspan'> years</span>
                     </div>
                     {errors.year && <p className='error-message'>{errors.year}</p>} {/* Error message */}
                   </div>
                 </div>
 
                 <div className='term'>
-                  <span style={{ margin: "15px 0px 10px 10px" }}>Interest rate</span>
-                  <div className='inputwidth2'>
-                    <div className="input-group">
+                  <span style={{ margin: "15px 0px 10px 10px",cursor:"pointer" }}>Interest rate</span>
+                  <div className='inputwidth2'  >
+                    <div className="input-group" style={inputstyle3} onMouseEnter={() => setIsHovered3(true)}
+                          onMouseLeave={() => setIsHovered3(false)}>
                       <input
                         value={rate}
                         onChange={handleRateChange}
@@ -199,20 +264,17 @@ export default function Calculator1() {
                         className="form-control"
                         aria-label="Amount (to the nearest dollar)"
                       />
-                      <span  style={{
-            backgroundColor: errors.year ? 'red' : 'black', // Change background color based on error
-            color: errors.year ? 'white' : 'white', // Keep text color white for better contrast
-          }} className='inputspan'> %</span>
+                      <span  style={spanstyle3} className='inputspan'> %</span>
                     </div>
                     {errors.rate && <p className='error-message'>{errors.rate}</p>} {/* Error message */}
                   </div>
                 </div>
               </div>
-
+             
               {/* Payment type */}
               <div className='paymenttype'>
                 
-                <p style={{ margin: "25px 0px 10px 0px" }}>Mortgage Type</p>
+                <p style={{ margin: "25px 0px 10px 0px",cursor:'pointer' }}>Mortgage Type</p>
                 <div style={formCheckStyle("repayment")}>
                   <input
                     style={formCheckInputStyle(selectedMortgageType === 'repayment')}
