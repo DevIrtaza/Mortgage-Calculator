@@ -70,7 +70,7 @@
 }
 
 .defaultresult img {
-    width: 60%;
+    width: 53%;
     align-self: center;
     margin-top: 100px;
 }
@@ -93,7 +93,8 @@
     border-radius: 0px 0px 0px 190px;
     display: flex;
     flex-direction: column;
-    padding: 4px 139px 3px 139px;
+    padding: 5px 139px 5px 139px;
+    cursor: pointer;
 }
 
 .calculationresult {
@@ -101,7 +102,8 @@
     border-radius: 0px 0px 0px 110px;
     display: flex;
     flex-direction: column;
-    padding: 37px 60px 122px 60px;
+    padding: 37px 60px 90px 60px;
+    cursor: pointer;
 }
 
 .calculationresult h2 {
@@ -168,7 +170,7 @@
     padding: 10px 20px;
     border-radius: 27px;
     transition: background-color 0.3s ease;
-    margin: 40px 0px 0px 70px;
+    margin: 20px 0px 0px 70px;
     display: flex;
     align-items: center;
 }
@@ -316,4 +318,10 @@
     .defaultresult h1 {
         font-size: 25px;
     }
+}
+
+
+.form-control:active, .form-control:focus{
+    outline:  none;
+    box-shadow: none;
 }

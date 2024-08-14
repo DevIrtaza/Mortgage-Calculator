@@ -26,7 +26,9 @@ export default function Calculator1() {
     borderRadius:"13px 10px 10px 13px ",
     borderColor: errors.amount ? "red" : isHovered1 ?" #e6e600" :"#ccf2ff",
     transition: 'border-color 0.3s, background-color 0.3s',
-    cursor: "pointer"
+    cursor: "pointer",
+    boxShadow:"none",
+    outline:"none"
   }
 
   const spanstyle1={
@@ -45,7 +47,9 @@ export default function Calculator1() {
     borderRadius:"10px 15px 15px 10px ",
     borderColor: errors.rate ? "red" : isHovered2 ?" #e6e600" :"#ccf2ff",
     transition: 'border-color 0.3s, background-color 0.3s',
-    cursor: "pointer"
+    cursor: "pointer",
+    boxShadow:"none",
+    outline:"none"
   }
 
   const spanstyle2={
@@ -64,7 +68,9 @@ export default function Calculator1() {
     borderRadius:"10px 15px 15px 10px ",
     borderColor: errors.rate ? "red" : isHovered3 ?" #e6e600" :"#ccf2ff",
     transition: 'border-color 0.3s, background-color 0.3s',
-      cursor:"pointer"
+      cursor:"pointer",
+      boxShadow:"none",
+      outline:"none"
   }
 
   const spanstyle3={
@@ -109,9 +115,7 @@ export default function Calculator1() {
     setSelectedMortgageType(event.target.value);
   };
 
-  const handleAmountChange = (event) => {
-    setAmount(event.target.value);
-  };
+  
 
   const handleYearChange = (event) => {
     setYear(event.target.value);
@@ -129,6 +133,29 @@ export default function Calculator1() {
     setErrors({ amount: "", year: "", rate: "" }); // Clear errors
   };
 
+  // Utility function to format number with commas
+const formatNumber = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+// Utility function to remove commas
+const removeCommas = (string) => {
+  return string.replace(/,/g, '');
+};
+const handleAmountChange = (event) => {
+  const rawValue = event.target.value;
+  const numericValue = removeCommas(rawValue);
+
+  if (!isNaN(numericValue) && numericValue.trim() !== '') {
+    // Format the input with commas
+    const formattedValue = formatNumber(parseFloat(numericValue));
+    setAmount(formattedValue);
+  } else {
+    setAmount(rawValue);
+  }
+};
+
+
   const calculateMonthlyPayment = (principal, annualRate, years) => {
     const monthlyRate = annualRate / 100 / 12;
     const totalPayments = years * 12;
@@ -136,15 +163,15 @@ export default function Calculator1() {
     return monthlyPayment.toFixed(2); // Format to 2 decimal places
   };
 
-    const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent reloading page
-
-    const principal = parseFloat(amount);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  
+    const principal = parseFloat(removeCommas(amount));
     const annualRate = parseFloat(rate);
     const years = parseInt(year, 10);
-
-    let newErrors = { amount: "", year: "", rate: "", type:"" };
-
+  
+    let newErrors = { amount: "", year: "", rate: "", type: "" };
+  
     if (isNaN(principal) || principal <= 0) {
       newErrors.amount = "This field is required";
     }
@@ -154,44 +181,33 @@ export default function Calculator1() {
     if (isNaN(years) || years <= 0) {
       newErrors.year = "This field is required";
     }
-
-    if(!(selectedMortgageType === 'repayment' || selectedMortgageType === 'interestOnly')){
-      
+    if (!(selectedMortgageType === 'repayment' || selectedMortgageType === 'interestOnly')) {
       newErrors.type = "This field is required";
     }
-
+  
     if (newErrors.amount || newErrors.rate || newErrors.year || newErrors.type) {
       setErrors(newErrors);
       return;
     }
-
-    // Clear errors if valid
-
-    setErrors({ amount: "", year: "", rate: "",type:"" });
-
-    // Calculate the monthly payment based on the mortgage type
-
+  
+    setErrors({ amount: "", year: "", rate: "", type: "" });
+  
     let result;
     let totalRepayment;
-
+  
     if (selectedMortgageType === 'repayment') {
       result = calculateMonthlyPayment(principal, annualRate, years);
-
-      // Calculate total repayment amount
       const totalPayments = years * 12;
       totalRepayment = (parseFloat(result) * totalPayments).toFixed(2);
-
     } else if (selectedMortgageType === 'interestOnly') {
-      result = (principal * annualRate / 100 / 12).toFixed(2); //Intrest only calculation
-
-      // For interest-only mortgage, total repayment is just interest over time
-
+      result = (principal * annualRate / 100 / 12).toFixed(2);
       totalRepayment = (principal * annualRate / 100).toFixed(2);
     }
-
+  
     settotalpayment(totalRepayment);
-    setResult(result); // Update result state
+    setResult(result);
   };
+  
 
   return (
     <div className='conatiner'>
@@ -231,7 +247,7 @@ export default function Calculator1() {
 
               <div className='twodiv'>
                 <div className='term'>
-                  <span style={{ margin: "15px 0px 10px 0px",cursor:"pointer"
+                  <span style={{ margin: "8px 0px 10px 0px",cursor:"pointer"
                     
                   }}>Mortgage Term</span>
                   <div className='inputwidth'  >
@@ -253,7 +269,7 @@ export default function Calculator1() {
                 </div>
 
                 <div className='term'>
-                  <span style={{ margin: "15px 0px 10px 10px",cursor:"pointer" }}>Interest rate</span>
+                  <span style={{ margin: "8px 0px 10px 10px",cursor:"pointer" }}>Interest rate</span>
                   <div className='inputwidth2'  >
                     <div className="input-group" style={inputstyle3} onMouseEnter={() => setIsHovered3(true)}
                           onMouseLeave={() => setIsHovered3(false)}>
@@ -274,7 +290,7 @@ export default function Calculator1() {
               {/* Payment type */}
               <div className='paymenttype'>
                 
-                <p style={{ margin: "25px 0px 10px 0px",cursor:'pointer' }}>Mortgage Type</p>
+                <p style={{ margin: "14px 0px 10px 0px",cursor:'pointer' }}>Mortgage Type</p>
                 <div style={formCheckStyle("repayment")}>
                   <input
                     style={formCheckInputStyle(selectedMortgageType === 'repayment')}
