@@ -45,7 +45,7 @@ export default function Calculator1() {
   const inputstyle2={
     border:"2px solid ",
     borderRadius:"10px 15px 15px 10px ",
-    borderColor: errors.rate ? "red" : isHovered2 ?" #e6e600" :"#ccf2ff",
+    borderColor: errors.year? "red" : isHovered2 ?" #e6e600" :"#ccf2ff",
     transition: 'border-color 0.3s, background-color 0.3s',
     cursor: "pointer",
     boxShadow:"none",
@@ -131,6 +131,7 @@ export default function Calculator1() {
     setYear("");
     setResult(null); // Clear the result
     setErrors({ amount: "", year: "", rate: "" }); // Clear errors
+    setSelectedMortgageType("")
   };
 
   // Utility function to format number with commas
