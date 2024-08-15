@@ -86,6 +86,7 @@
     font-size: 20px;
     text-align: center;
     margin-bottom: 105px;
+    color: #5a747d;
 }
 
 .defaultresult {
@@ -115,6 +116,7 @@
     text-align: left;
     font-size: 20px;
     margin-bottom: 35px;
+    color: #5a747d;
 }
 
 .calculationresult h1 {
